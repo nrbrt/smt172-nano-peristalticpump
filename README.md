@@ -12,7 +12,7 @@ For example,
 would be a valid command to send.
 
 The install script is meant to be run on a raspberry pi like this:
-wget -O - https://raw.githubusercontent.com/nrbrt/smt172-nano-peristalticpump/master/install.sh | sh
+`wget -O - https://raw.githubusercontent.com/nrbrt/smt172-nano-peristalticpump/master/install.sh | sh`
 
 This will program the nano, that needs to be connected at that moment, without any user interaction and is meant for novice users
 and easy installation.
