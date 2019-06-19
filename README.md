@@ -1,13 +1,13 @@
 This project is to control a persitalticpump through the serial-USB port of an Arduino Nano, while also measuring the temperature with an smt172 in combination with a Raspberry Pi.
 The command that can be sent is the following:
 
-rot:x:y:z
+`rot:x:y:z`
 
 where x is the speed, y is the maxspeed and z is the acceleration
 
 For example,
 
-rot:500:1000:100
+`rot:500:1000:100`
 
 would be a valid command to send.
 
