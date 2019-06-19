@@ -19,6 +19,8 @@ float temp = 0;
 String str;
 int iCount, i;
 String sParams[6];
+bool accset = false;
+bool maxset = false;
 
 void setup() {
   Serial.begin(115200);
@@ -47,10 +49,21 @@ void loop() {
 
      //rotate at certain speed with certain acceleration.
      if(sParams[0] == "rot"){
-        stepper.setMaxSpeed(sParams[2].toFloat());
-        stepper.setAcceleration(sParams[3].toFloat());
-        stepper.setSpeed(sParams[1].toFloat());        
+        if(accset && maxset){
+          stepper.setSpeed(sParams[1].toFloat());        
+        }
      }
+     
+     if(sParams[0] == "max" && sParams[1].toFloat() > 0){
+        stepper.setMaxSpeed(sParams[1].toFloat());
+        maxset = true;
+     }
+
+     if(sParams[0] == "acc" && sParams[1].toFloat() > 0){
+        stepper.setAcceleration(sParams[1].toFloat());
+        accset = true;
+     }
+     
   }
   stepper.runSpeed();
 }

@@ -1,15 +1,20 @@
 This project is to control a persitalticpump through the serial-USB port of an Arduino Nano, while also measuring the temperature with an smt172 in combination with a Raspberry Pi.
-The command that can be sent is the following:
+The commands that can be sent are the following:
 
-`rot:x:y:z`
+`rot:x`
 
-where x is the speed, y is the maxspeed and z is the acceleration
+where x is the speed in steps per second. This command will only work if the next two are already set.
+a postive x will rotate the motor CW a negative value for x will rotate the motor CCW
 
-For example,
+`max:y`
 
-`rot:500:1000:100`
+where y is the maxspeed in steps per second. The motor will not rotate faster than this speed
 
-would be a valid command to send.
+`acc:z`
+
+where z is the acceleration in steps per second per second. With this setting you can ramp up and down. Useful at higher speeds and microstepping
+
+
 
 The install script is meant to be run on a raspberry pi like this:
 
