@@ -69,7 +69,8 @@ void loop() {
         rotating = false;
         stepper.setMaxSpeed(sParams[1].toFloat());
         stepper.setSpeed(sParams[1].toFloat());
-        stepper.move(sParams[2].toInt());
+        long pos = long(sParams[2].toInt());
+        stepper.move(pos);
      }
      
   }
