@@ -1,4 +1,4 @@
-This project is to control a persitalticpump through the serial-USB port of an Arduino Nano, while also measuring the temperature with an smt172 in combination with a Raspberry Pi.
+This project controls a peristaltic pump through the serial-USB port of an Arduino Nano, while also measuring the temperature with an smt172 in combination with a Raspberry Pi.
 The commands that can be sent are the following:
 
 `rot:x`
