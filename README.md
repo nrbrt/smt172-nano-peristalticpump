@@ -6,15 +6,13 @@ The commands that can be sent are the following:
 where x is the speed in steps per second. This command will only work if the next two are already set.
 a postive x will rotate the motor CW a negative value for x will rotate the motor CCW
 
-`max:y`
-
-where y is the maxspeed in steps per second. The motor will not rotate faster than this speed
-
 `acc:z`
 
 where z is the acceleration in steps per second per second. With this setting you can ramp up and down. Useful at higher speeds and microstepping
 
+`pos:x:y`
 
+where x is like before the speed and y a relative position to the current one. This way you can calibrate a certain amount to be pumped at a certain speed.
 
 The install script is meant to be run on a raspberry pi like this:
 
